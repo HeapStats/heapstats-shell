@@ -2,9 +2,10 @@
 
 ## Requirements
 
-* JDK 9
+* JDK 13 or later
+* Maven (if need)
 * `heapstats-core.jar`
-    * https://mvnrepository.com/artifact/jp.co.ntt.oss.heapstats/heapstats-core
+    * https://github.com/HeapStats/heapstats/packages/44263
     * `heapstats-shell` will download this JAR via Maven.
 
 ## How to use
@@ -16,7 +17,7 @@ $ heapstats-shell
 or
 
 ```
-$ jshell --class-path target/dependency/heapstats-core*.jar --feedback heapstats heapstats.jsh
+$jshell --module-path target/dependency --add-module heapstats.core --feedback heapstats heapstats.jsh
 ```
 
 ## Command reference

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright (C) 2017, Yasumasa Suenaga
+# Copyright (C) 2017-2019, Yasumasa Suenaga
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -30,6 +30,7 @@ if [ ! -f $BASEDIR/target/dependency/heapstats-core*.jar ]; then
 fi
 
 $JAVA_HOME/bin/jshell \
-    --class-path $BASEDIR/target/dependency/heapstats-core*.jar \
+    --module-path $BASEDIR/target/dependency \
+    --add-module heapstats.core \
     --feedback heapstats \
     $BASEDIR/heapstats.jsh
