@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016-2017 Yasumasa Suenaga
+ * Copyright (C) 2016-2019 Yasumasa Suenaga
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -370,6 +370,6 @@ void showIOEvents(){
 
 
 /* Banner */
-System.out.println("HeapStats Shell 0.1.0");
-System.out.println("Copyright (C) 2016-2017 Yasumasa Suenaga");
+System.out.println("HeapStats Shell 0.2.0");
+System.out.println("Copyright (C) 2016-2019 Yasumasa Suenaga");
 
