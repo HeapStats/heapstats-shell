@@ -2,7 +2,7 @@
 
 ## Requirements
 
-* JDK 13 or later
+* JDK 11 or later
 * Maven (if need)
 * `heapstats-core.jar`
     * https://github.com/HeapStats/heapstats/packages/44263
@@ -17,7 +17,7 @@ $ heapstats-shell
 or
 
 ```
-$jshell --module-path target/dependency --add-module heapstats.core --feedback heapstats heapstats.jsh
+$ jshell --module-path target/dependency --add-module heapstats.core --feedback heapstats heapstats.jsh
 ```
 
 ## Command reference

@@ -25,6 +25,12 @@ if [ -z "$JAVA_HOME" ]; then
   exit 1
 fi
 
+MAJOR_VER=`$JAVA_HOME/bin/java -XshowSettings:properties --version 2>&1 | grep java.specification.version | sed -e 's/^\(.\+\)= \([0-9]\+\)$/\2/'`
+if [ -z "$MAJOR_VER" ] || [ $MAJOR_VER -lt 11 ]; then
+  echo 'JDK 11 or later is required.'
+  exit 2
+fi
+
 if [ ! -f $BASEDIR/target/dependency/heapstats-core*.jar ]; then
   mvn dependency:copy-dependencies
 fi
